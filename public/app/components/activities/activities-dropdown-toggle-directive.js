@@ -1,7 +1,7 @@
 define(['app'], function(app) {
   "use strict";
 
-  return app.directive('activitiesDropdownToggle', function($log) {
+  return app.directive('activitiesDropdownToggle', function() {
     var link = function($scope, $element, attrs) {
       var ajax_dropdown = null;
 
@@ -13,8 +13,6 @@ define(['app'], function(app) {
         }
 
         ajax_dropdown = $(this).next('.ajax-dropdown');
-
-        console.log(ajax_dropdown);
 
         if (!ajax_dropdown.is(':visible')) {
           ajax_dropdown.fadeIn(150);

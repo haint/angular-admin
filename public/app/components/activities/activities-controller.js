@@ -1,7 +1,7 @@
 define(['app'], function(app) {
   "use strict";
 
-  return app.controller('ActivitiesCtrl', ActivitiesCtrl);
+  return app.controller('ActivitiesCtrl', ['$scope', '$log', '$filter', 'activityService', ActivitiesCtrl]);
 
   function ActivitiesCtrl($scope, $log, $filter, activityService) {
     $scope.activeTab = 'default';

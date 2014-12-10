@@ -1,7 +1,7 @@
 define(['app'], function(app) {
   "use strict";
 
-  return app.factory('activityService', function($http, $log) {
+  return app.factory('activityService', ['$http', '$log', function($http, $log) {
 
     function getActivities(callback) {
 
@@ -40,5 +40,5 @@ define(['app'], function(app) {
       }
     }
 
-  });
+  }]);
 })
