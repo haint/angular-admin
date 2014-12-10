@@ -4,13 +4,12 @@
       <div class="bar-holder no-padding">
         
         <p class="margin-bottom-5">
-          <strong>{{task.status}}</strong><i>{{task.title}}</i>
+          <strong>{{task.status}}</strong>: <i>{{task.title}}</i>
           <span class="pull-right semi-bold text-muted">{{task.width}}%</span>
         </p>
 
         <div class="progress {{task.type}}">
-          <div class="progress-bar bg-color-teal" style="{{task.width}}%">
-            <span> 60/100 </span>
+          <div class="progress-bar bg-color-teal" style="width: {{task.width}}%">
           </div>
         </div>
 

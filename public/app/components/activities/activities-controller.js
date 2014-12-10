@@ -3,7 +3,7 @@ define(['app'], function(app) {
 
   return app.controller('ActivitiesCtrl', ActivitiesCtrl);
 
-  function ActivitiesCtrl($scope, $log, activityService) {
+  function ActivitiesCtrl($scope, $log, $filter, activityService) {
     $scope.activeTab = 'default';
     $scope.currentActivityItems = [];
 
@@ -23,8 +23,13 @@ define(['app'], function(app) {
 
       activityService.getbytype(activityType, function(data) {
         $scope.currentActivityItems = data.data;
-      })
+      });
+
+      $filter('filter')($scope.activities.types, function(value, index) {
+        if(value.name === activityType) {
+          value.length = 0;
+        }
+      });
     }
   }
-
 })
