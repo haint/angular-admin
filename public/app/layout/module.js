@@ -19,6 +19,7 @@ define([
           }
         }
       });
+    $urlRouterProvider.otherwise('/dashboard');
   });
 
   module.run(function($couchPotato) {

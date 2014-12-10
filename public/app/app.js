@@ -12,7 +12,11 @@ define([
     'scs.couch-potato',
     'ngAnimate',
     'ui.router',
-    'ui.bootstrap'
+    'ui.bootstrap',
+
+    //App
+    'app.layout',
+    'app.dashboard'
   ]);
 
   couchPotato.configureApp(app);
