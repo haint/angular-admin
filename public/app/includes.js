@@ -6,6 +6,10 @@ define([
   //dashboard
   'dashboard/module',
 
+  //account
+  'auth/module',
+  'auth/models/User',
+
   //components
 
   //activities

@@ -9,22 +9,28 @@ define([
 
   couchPotato.configureApp(module);
 
-  module.config(function ($stateProvider, $couchPotatoProvider, $urlRouterProvider) {
+  module.config(['$stateProvider', '$couchPotatoProvider', '$urlRouterProvider',
+    function ($stateProvider, $couchPotatoProvider, $urlRouterProvider) {
     $stateProvider
       .state('app', {
         abstract: true,
         views: {
           root: {
-            templateUrl: 'app/layout/layout.tpl.html'
+            templateUrl: 'app/layout/layout.tpl.html',
+            resolve: {
+              deps: $couchPotatoProvider.resolveDependencies([
+                'auth/directives/login-info'
+              ])
+            }
           }
         }
       });
     $urlRouterProvider.otherwise('/dashboard');
-  });
+  }]);
 
-  module.run(function($couchPotato) {
+  module.run(['$couchPotato', function($couchPotato) {
     module.lazy = $couchPotato;
-  });
+  }]);
 
   return module;
 })

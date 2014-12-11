@@ -16,12 +16,13 @@ define([
 
     //App
     'app.layout',
-    'app.dashboard'
+    'app.dashboard',
+    'app.auth'
   ]);
 
   couchPotato.configureApp(app);
 
-  app.config(function($provide, $httpProvider) {
+  app.config(['$provide', '$httpProvider',function($provide, $httpProvider) {
 
     //Intercept http calls.
     $provide.factory('ErrorHttpInterceptor', function($q) {
@@ -61,13 +62,14 @@ define([
     //Add the interceptor to $httpProvider.
     $httpProvider.interceptors.push('ErrorHttpInterceptor');
 
-  });
+  }]);
 
-  app.run(function($couchPotato, $rootScope, $state, $stateParams) {
-    app.lazy = $couchPotato;
-    $rootScope.$state = $state;
-    $rootScope.$stateParams = $stateParams;
-  });
+  app.run(['$couchPotato', '$rootScope', '$state', '$stateParams', 
+    function($couchPotato, $rootScope, $state, $stateParams){
+      app.lazy = $couchPotato;
+      $rootScope.$state = $state;
+      $rootScope.$stateParams = $stateParams;    
+  }]);
 
   return app;
 });
