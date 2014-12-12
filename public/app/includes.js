@@ -1,7 +1,7 @@
 define([
   //layout
   'layout/module',
-  'layout/directives/smartInclude',
+  'layout/directives/smart-include',
 
   //dashboard
   'dashboard/module',
