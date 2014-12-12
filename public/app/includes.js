@@ -2,6 +2,7 @@ define([
   //layout
   'layout/module',
   'layout/directives/smart-include',
+  'layout/directives/smart-menu',
 
   //dashboard
   'dashboard/module',
