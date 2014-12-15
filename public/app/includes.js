@@ -1,6 +1,7 @@
 define([
   //layout
   'layout/module',
+  'layout/actions/minify-menu',
   'layout/directives/smart-include',
   'layout/directives/smart-menu',
 
