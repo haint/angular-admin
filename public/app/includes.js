@@ -5,6 +5,9 @@ define([
   'layout/actions/toggle-menu',
   'layout/directives/smart-include',
   'layout/directives/smart-menu',
+  'layout/directives/search-autocomplete',
+
+  'layout/service/smart-css',
 
   //dashboard
   'dashboard/module',

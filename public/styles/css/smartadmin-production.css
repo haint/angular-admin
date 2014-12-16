@@ -11698,7 +11698,7 @@ input[type="url"].ui-autocomplete-loading,
 input[type="search"].ui-autocomplete-loading,
 input[type="tel"].ui-autocomplete-loading,
 input[type="color"].ui-autocomplete-loading {
-  background-image: url("../img/select2-spinner.html") !important;
+  background-image: url("../img/select2-spinner.gif") !important;
   background-repeat: no-repeat;
   background-position: 99% 50%;
   padding-right: 27px;
