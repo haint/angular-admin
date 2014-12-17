@@ -24,6 +24,11 @@ define([
   'components/activities/activities-service',
   'components/activities/activities-dropdown-toggle-directive',
 
+  //language
+  'components/language/Language',
+  'components/language/language-selector',
+  'components/language/language-controller',
+
   //projects
   'components/projects/Projects',
   'components/projects/recent-projects'

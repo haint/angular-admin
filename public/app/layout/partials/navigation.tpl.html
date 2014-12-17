@@ -6,35 +6,34 @@
 
   <nav>
 
-    <!--TODO: Localization label name -->
     <ul data-smart-menu>
       
       <li>
         <a title="Dashboard"><i class="fa fa-lg fa-fw fa-home"></i>
-          <span class="menu-item-parent">Dashboard</span>
+          <span class="menu-item-parent">{{getWord('Dashboard')}}</span>
         </a>
       </li>
       <li>
         <a title="Inbox"><i class="fa fa-lg fa-fw fa-inbox"></i>
-          <span class="menu-item-parent">Inbox</span>
+          <span class="menu-item-parent">{{getWord('Inbox')}}</span>
         </a>
       </li>     
       <li data-menu-collapse>
         <a href="#"><i class="fa fa-lg fa-fw fa-bar-chart-o"></i>
-          <span class="menu-item-parent">Graphs</span>
+          <span class="menu-item-parent">{{getWord('Graphs')}}</span>
         </a>
         <ul>
           <li>
-            <a>Flot Chart</a>
+            <a>{{getWord('Flot Chart')}}</a>
           </li>
           <li>
-            <a>Morris Charts</a>
+            <a>{{getWord('Morris Charts')}}</a>
           </li>
           <li>
-            <a>Inline Charts</a>
+            <a>{{getWord('Inline Charts')}}</a>
           </li>
           <li>
-            <a>Dygraps</a>
+            <a>{{getWord('Dygraps')}}</a>
           </li>
           <li>
             <a>Chart.js <span class="badge pull-right inbox-badge bg-color-yellow">new</span></a>
@@ -43,117 +42,117 @@
       </li>
       <li data-menu-collapse>
         <a href="#"><i class="fa fa-lg fa-fw fa-table"></i> 
-          <span class="menu-item-parent">Tables</span>
+          <span class="menu-item-parent">{{getWord('Tables')}}</span>
         </a>
         <ul>
           <li>
-            <a>Normal Tables</a>
+            <a>{{getWord('Normal Tables')}}</a>
           </li>
           <li>
-            <a>Data Tables <span class="badge pull-right inbox-badge bg-color-greenLight">v1.10</span></a>
+            <a>getWord{{('Data Tables')}} <span class="badge pull-right inbox-badge bg-color-greenLight">v1.10</span></a>
           </li>
           <li>
-            <a>Jquery Grid</a>
+            <a>{{getWord('Jquery Grid')}}</a>
           </li>
         </ul>
       </li>
       <li data-menu-collapse>
         <a href="#"><i class="fa fa-lg fa-fw fa-pencil-square-o"></i>
-          <span class="menu-item-parent">Forms</span>
+          <span class="menu-item-parent">{{getWord('Forms')}}</span>
         </a>
         <ul>
           <li>
-            <a>Smart Form Elements</a>
+            <a>{{getWord('Smart Form Elements')}}</a>
           </li>
           <li>
-            <a>Smart Form Layouts</a>
+            <a>{{getWord('Smart Form Layouts')}}</a>
           </li>
           <li>
-            <a>Smart Form Validation</a>
+            <a>{{getWord('Smart Form Validation')}}</a>
           </li>
           <li>
-            <a>Bootstrap Form Elements</a>
+            <a>{{getWord('Bootstrap Form Elements')}}</a>
           </li>
           <li>
-            <a>Bootstrap Form Validation</a>
+            <a>{{getWord('Bootstrap Form Validation')}}</a>
           </li>
           <li>
-            <a>Form Plugins</a>
+            <a>{{getWord('Form Plugins')}}</a>
           </li>
           <li>
-            <a>Wizards</a>
+            <a>{{getWord('Wizards')}}</a>
           </li>
           <li>
-            <a>Bootstrap Editors</a>
+            <a>{{getWord('Bootstrap Editors')}}</a>
           </li>
           <li>
-            <a>Dropzone</a>
+            <a>{{getWord('Dropzone')}}</a>
           </li>
           <li>
-            <a>Image Cropping <span class="badge pull-right inbox-badge bg-color-yellow">new</span></a>
+            <a>{{getWord('Image Cropping')}} <span class="badge pull-right inbox-badge bg-color-yellow">new</span></a>
           </li>
         </ul>
       </li>
       <li data-menu-collapse>
         <a href="#"><i class="fa fa-lg fa-fw fa-desktop"></i>
-          <span class="menu-item-parent">UI Elements</span>
+          <span class="menu-item-parent">{{getWord('UI Elements')}}</span>
         </a>
         <ul>
           <li>
-            <a>General Elements</a>
+            <a>{{getWord('General Elements')}}</a>
           </li>
           <li>
-            <a>Buttons</a>
+            <a>{{getWord('Buttons')}}</a>
           </li>
           <li data-menu-collapse>
-            <a href="#">Icons</a>
+            <a href="#">{{getWord('Icons')}}</a>
             <ul>
               <li>
-                <a>Font Awesome</a>
+                <a>{{getWord('Font Awesome')}}</a>
               </li>
               <li>
-                <a>Glyph Icons</a>
+                <a>{{getWord('Glyph Icons')}}</a>
               </li>
               <li>
-                <a>Flags</a>
+                <a>{{getWord('Flags')}}</a>
               </li>
             </ul>
           </li>
           <li>
-            <a>Grid</a>
+            <a>{{getWord('Grid')}}</a>
           </li>
           <li>
-            <a>Tree View</a>
+            <a>{{getWord('Tree View')}}</a>
           </li>
           <li>
-            <a>Nestable Lists</a>
+            <a>{{getWord('Nestable Lists')}}</a>
           </li>
           <li>
-            <a>JQuery UI</a>
+            <a>{{getWord('JQuery UI')}}</a>
           </li>
           <li>
-            <a>Typography</a>
+            <a>{{getWord('Typography')}}</a>
           </li>
           <li data-menu-collapse>
-            <a href="#">Six Level Menu</a>
+            <a href="#">{{getWord('Six Level Menu')}}</a>
             <ul>
               <li data-menu-collapse>
-                <a href="#"><i class="fa fa-fw fa-folder-open"></i> Item #2</a>
+                <a href="#"><i class="fa fa-fw fa-folder-open"></i> {{getWord('Item #2')}}</a>
                 <ul>
                   <li data-menu-collapse>
-                    <a href="#"><i class="fa fa-fw fa-folder-open"></i> Sub #2.1</a>
+                    <a href="#"><i class="fa fa-fw fa-folder-open"></i> {{getWord('Sub #2.1')}}</a>
                     <ul>
                       <li>
-                        <a href="#"><i class="fa fa-fw fa-file-text"></i> Item #2.1.1</a>
+                        <a href="#"><i class="fa fa-fw fa-file-text"></i> {{getWord('Item #2.1.1')}}</a>
                       </li>
                       <li data-menu-collapse>
-                        <a href="#"><i class="fa fa-fw fa-plus"></i> Expand</a>
+                        <a href="#"><i class="fa fa-fw fa-plus"></i> {{getWord('Expand')}}</a>
                         <ul>
                           <li>
-                            <a href="#"><i class="fa fa-fw fa-file-text"></i> File</a>
+                            <a href="#"><i class="fa fa-fw fa-file-text"></i> {{getWord('File')}}</a>
                           </li>
                           <li>
-                            <a href="#"><i class="fa fa-fw fa-trash-o"></i> Delete</a>
+                            <a href="#"><i class="fa fa-fw fa-trash-o"></i> {{getWord('Delete')}}</a>
                           </li>
                         </ul>
                       </li>
@@ -162,16 +161,16 @@
                 </ul>
               </li>
               <li data-menu-collapse>
-                <a href="#"><i class="fa fa-fw fa-folder-open"></i> Item #3</a>
+                <a href="#"><i class="fa fa-fw fa-folder-open"></i> {{getWord('Item #3')}}</a>
                 <ul>
                   <li data-menu-collapse>
-                    <a href="#"><i class="fa fa-fw fa-folder-open"></i> 3th Level</a>
+                    <a href="#"><i class="fa fa-fw fa-folder-open"></i> {{getWord('3th Level')}}</a>
                     <ul>
                       <li>
-                        <a href="#"><i class="fa fa-fw fa-file-text"></i> File</a>
+                        <a href="#"><i class="fa fa-fw fa-file-text"></i> {{getWord('File')}}</a>
                       </li>
                       <li>
-                        <a href="#"><i class="fa fa-fw fa-file-text"></i> File</a>
+                        <a href="#"><i class="fa fa-fw fa-file-text"></i> {{getWord('File')}}</a>
                       </li>
                     </ul>
                   </li>
@@ -183,94 +182,94 @@
       </li>
       <li>
         <a><i class="fa fa-lg fa-fw fa-calendar"><em>3</em></i> 
-          <san class="menu-item-parent">Calendar</san>
+          <san class="menu-item-parent">{{getWord('Calendar')}}</san>
         </a>
       </li>
       <li>
-        <a><i class="fa fa-lg fa-fw fa-list-alt"></i> <span class="menu-item-parent">Widgets</span></a>
+        <a><i class="fa fa-lg fa-fw fa-list-alt"></i> <span class="menu-item-parent">{{getWord('Widgets')}}</span></a>
       </li>
       <li data-menu-collapse>
         <a href="#"><i class="fa fa-lg fa-fw fa-puzzle-piece"></i> 
-          <span class="menu-item-parent">App Views</span>
+          <span class="menu-item-parent">{{getWord('App Views')}}</span>
         </a>
         <ul>
           <li>
-            <a><i class="fa fa-file-text-o"></i> Projects</a>
+            <a><i class="fa fa-file-text-o"></i> {{getWord('Projects')}}</a>
           </li>
           <li>
-            <a><i class="fa fa-paragraph"></i> Blog</a>
+            <a><i class="fa fa-paragraph"></i> {{getWord('Blog')}}</a>
           </li>
           <li>
-            <a><i class="fa fa-picture-o"></i> Gallery</a>
+            <a><i class="fa fa-picture-o"></i> {{getWord('Gallery')}}</a>
           </li>
           <li data-menu-collapse>
-            <a href="#"><i class="fa fa-comments"></i> Forum Layouts</a>
+            <a href="#"><i class="fa fa-comments"></i> {{getWord('Forum Layouts')}}</a>
             <ul>
               <li>
-                <a><i class="fa fa-picture-o"></i> General View</a>
+                <a><i class="fa fa-picture-o"></i> {{getWord('General View')}}</a>
               </li>
               <li>
-                <a><i class="fa fa-picture-o"></i> Topic View</a>
+                <a><i class="fa fa-picture-o"></i> {{getWord('Topic View')}}</a>
               </li>
               <li>
-                <a><i class="fa fa-picture-o"></i> Post View</a>
+                <a><i class="fa fa-picture-o"></i> {{getWord('Post View')}}</a>
               </li>
             </ul>
           </li>
           <li>
-            <a><i class="fa fa-group"></i> Profile</a>
+            <a><i class="fa fa-group"></i> {{getWord('Profile')}}</a>
           </li>
           <li>
-            <a><i class="fa fa-clock-o"></i> Timeline</a>
+            <a><i class="fa fa-clock-o"></i> {{getWord('Timeline')}}</a>
           </li>
         </ul>
       </li>
       <li>
         <a><i class="fa fa-lg fa-fw fa-map-marker"></i> 
-          <span class="menu-item-parent">GMap Skins</span>
+          <span class="menu-item-parent">{{getWord('GMap Skins')}}</span>
           <span class="badge pull-right inbox-badge bg-color-greenLight">6</span>
         </a>
       </li>
       <li data-menu-collapse>
         <a href="#"><i class="fa fa-lg fa-fw fa-windows"></i>
-          <span class="menu-item-parent">Miscellaneous</span>
+          <span class="menu-item-parent">{{getWord('Miscellaneous')}}</span>
         </a>
         <ul>
           <li>
-            <a>Landing Page <i class="fa fa-external-link"></i></a>
+            <a>{{getWord('Landing Page')}} <i class="fa fa-external-link"></i></a>
           </li>
           <li>
-            <a>Pricing Tables</a>
+            <a>{{getWord('Pricing Tables')}}</a>
           </li>
           <li>
-            <a>Invoice</a>
+            <a>{{getWord('Invoice')}}</a>
           </li>
           <li>
-            <a>Login</a>
+            <a>{{getWord('Login')}}</a>
           </li>
           <li>
-            <a>Register</a>
+            <a>{{getWord('Register')}}</a>
           </li>
           <li>
-            <a>Locked Screen</a>
+            <a>{{getWord('Locked Screen')}}</a>
           </li>
           <li>
-            <a>Error 404</a>
+            <a>{{getWord('Error 404')}}</a>
           </li>
           <li>
-            <a>Error 500</a>
+            <a>{{getWord('Error 500')}}</a>
           </li>
           <li>
-            <a>Blank Page</a>
+            <a>{{getWord('Blank Page')}}</a>
           </li>
           <li>
-            <a>Email Template</a>
+            <a>{{getWord('Email Template')}}</a>
           </li>
           <li>
-            <a>Search Page</a>
+            <a>{{getWord('Search Page')}}</a>
           </li>
           <li>
-            <a>CK Editor</a>
+            <a>{{getWord('CK Editor')}}</a>
           </li>
         </ul>
       </li>
@@ -280,13 +279,13 @@
         </a>
         <ul>
           <li>
-            <a><i class="fa fa-stack-overflow"></i> Different Versions</a>
+            <a><i class="fa fa-stack-overflow"></i> {{getWord('Different Versions')}}</a>
           </li>
           <li>
-            <a><i class="fa fa-book"></i> Documentation</a>
+            <a><i class="fa fa-book"></i> {{getWord('Documentation')}}</a>
           </li>
           <li>
-            <a><i class="fa fa-bug"></i> Bug Tracker</a>
+            <a><i class="fa fa-bug"></i> {{getWord('Bug Tracker')}}</a>
           </li>
         </ul>
       </li>
