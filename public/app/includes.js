@@ -3,6 +3,7 @@ define([
   'layout/module',
   'layout/actions/minify-menu',
   'layout/actions/toggle-menu',
+  'layout/actions/full-screen',
   'layout/directives/smart-include',
   'layout/directives/smart-menu',
   'layout/directives/search-autocomplete',
