@@ -8,6 +8,8 @@ define([
   'layout/directives/smart-menu',
   'layout/directives/search-autocomplete',
 
+  'layout/directives/demo/demo-states',
+
   'layout/service/smart-css',
 
   //dashboard

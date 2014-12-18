@@ -120,7 +120,7 @@ var require = {
         'notification': '../smartadmin-plugin/notification/SmartNotification',
 
         // app js file includes
-        'appConfig': '../app.config',
+        'appConfig': 'app.config',
         'modules-includes': 'includes'
 	},
     shim : {
