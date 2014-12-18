@@ -26,6 +26,8 @@ define([
   'components/activities/activities-service',
   'components/activities/activities-dropdown-toggle-directive',
 
+  'components/shortcut/toggle-shortcut',
+
   //language
   'components/language/Language',
   'components/language/language-selector',
