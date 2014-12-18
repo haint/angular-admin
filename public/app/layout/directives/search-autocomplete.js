@@ -30,7 +30,6 @@ define(['layout/module'], function(module) {
       restrict: 'A',
       link: function(scope, element, attr) {
         var $element = $(element);
-        console.log($element.find('>input[type="text"]'));
         $element.find('>input[type="text"]').autocomplete({
           source: availabelTags
         })
