@@ -1,7 +1,7 @@
 define(['layout/module', 'lodash'], function(module, _) {
   "use strict";
 
-  module.registerFactory('SmartCss', ['$rootScope', '$timeout'], function($rootScope, $timeout) {
+  module.registerFactory('SmartCss', ['$rootScope', '$timeout', function($rootScope, $timeout) {
     var sheet = (function(){
       //Create the <style> tag
       var style = document.createElement('style');
@@ -69,5 +69,5 @@ define(['layout/module', 'lodash'], function(module, _) {
     });
 
     return SmartCss;
-  });
+  }]);
 });

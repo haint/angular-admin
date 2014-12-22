@@ -7,7 +7,7 @@ define(['layout/module', 'require', 'fastclick'], function(module, require) {
       restrict: 'A',
       compile: function(element, attributes) {
         element.removeAttr('smart-fast-click data-smart-fast-click');
-        FastClick.attch(element);
+        FastClick.attach(element);
         if (!FastClick.notNeeded()) element.addClass('needsclick');
       }
     }

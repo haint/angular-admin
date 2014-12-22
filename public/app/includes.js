@@ -11,10 +11,10 @@ define([
   'layout/directives/smart-page-title',
   'layout/directives/smart-device-detect',
   'layout/directives/smart-fast-click',
+  'layout/directives/smart-layout',
   'layout/directives/demo/demo-states',
-
   'layout/service/smart-css',
-
+  
   //dashboard
   'dashboard/module',
 

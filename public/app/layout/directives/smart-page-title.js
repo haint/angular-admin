@@ -16,7 +16,7 @@ define(['layout/module'], function(module) {
           });
         };
 
-        $rootScope.on('$stateChangeStart', listener);
+        $rootScope.$on('$stateChangeStart', listener);
       }
     }
   }]);
