@@ -8,6 +8,9 @@ define([
   'layout/directives/smart-menu',
   'layout/directives/search-autocomplete',
   'layout/directives/smart-router-animation-wrap',
+  'layout/directives/smart-page-title',
+  'layout/directives/smart-device-detect',
+  'layout/directives/smart-fast-click',
   'layout/directives/demo/demo-states',
 
   'layout/service/smart-css',
