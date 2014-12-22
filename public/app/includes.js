@@ -7,7 +7,7 @@ define([
   'layout/directives/smart-include',
   'layout/directives/smart-menu',
   'layout/directives/search-autocomplete',
-
+  'layout/directives/smart-router-animation-wrap',
   'layout/directives/demo/demo-states',
 
   'layout/service/smart-css',

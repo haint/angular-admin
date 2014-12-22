@@ -11,6 +11,7 @@ var require = {
         'angular-resource': '../plugin/angular-resource/angular-resource',
         'angular-sanitize': '../plugin/angular-sanitize/angular-sanitize',
         'angular-animate': '../plugin/angular-animate/angular-animate',
+        'angular-loading-bar': '../plugin/angular-loading-bar/build/loading-bar',
 
         'domReady': '../plugin/requirejs-domready/domReady',
 

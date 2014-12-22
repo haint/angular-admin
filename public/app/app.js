@@ -3,6 +3,7 @@ define([
   'angular-couch-potato',
   'angular-ui-router',
   'angular-animate',
+  'angular-loading-bar',
   'angular-bootstrap',
   'smartwidgets',
   'notification'
@@ -10,6 +11,7 @@ define([
 
   var app = ng.module('app', [
     'scs.couch-potato',
+    'angular-loading-bar',
     'ngAnimate',
     'ui.router',
     'ui.bootstrap',

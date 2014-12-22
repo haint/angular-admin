@@ -15,7 +15,7 @@ define([
       .state('app', {
         abstract: true,
         views: {
-          root: {
+          'root': {
             templateUrl: 'app/layout/layout.tpl.html',
             resolve: {
               deps: $couchPotatoProvider.resolveDependencies([
