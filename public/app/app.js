@@ -1,3 +1,10 @@
+'use strict';
+
+/***
+  *
+  * Main module of application
+  *
+  */
 define([
   'angular',
   'angular-couch-potato',
@@ -10,11 +17,13 @@ define([
 ], function(ng, couchPotato) {
 
   var app = ng.module('app', [
+
     'scs.couch-potato',
-    'angular-loading-bar',
     'ngAnimate',
     'ui.router',
     'ui.bootstrap',
+
+    'angular-loading-bar',
 
     //App
     'app.layout',
@@ -24,7 +33,10 @@ define([
 
   couchPotato.configureApp(app);
 
-  app.config(['$provide', '$httpProvider',function($provide, $httpProvider) {
+  app.config(['$provide', '$httpProvider', 'cfpLoadingBarProvider',function($provide, $httpProvider, cfpLoadingBarProvider) {
+
+    //
+    cfpLoadingBarProvider.includeSpinner = false;
 
     //Intercept http calls.
     $provide.factory('ErrorHttpInterceptor', function($q) {
