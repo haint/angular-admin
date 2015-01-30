@@ -4,6 +4,8 @@ define([
   'layout/actions/minify-menu',
   'layout/actions/toggle-menu',
   'layout/actions/full-screen',
+  'layout/actions/reset-widgets',
+
   'layout/directives/smart-include',
   'layout/directives/smart-menu',
   'layout/directives/search-autocomplete',
