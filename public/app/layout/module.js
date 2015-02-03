@@ -19,7 +19,8 @@ define([
             templateUrl: 'app/layout/layout.tpl.html',
             resolve: {
               deps: $couchPotatoProvider.resolveDependencies([
-                'auth/directives/login-info'
+                'auth/directives/login-info',
+                'modules/graphs/directives/inline/sparkline-container'
               ])
             }
           }

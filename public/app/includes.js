@@ -20,9 +20,17 @@ define([
   'layout/directives/demo/demo-states',
 
   'layout/service/smart-css',
+  'modules/widgets/directives/widget-grid',
+  'modules/widgets/directives/jarvis-widget',
 
   //dashboard
   'dashboard/module',
+
+  //graphs
+  'modules/graphs/module',
+
+  //widgets
+  'modules/widgets/module',
 
   //account
   'auth/module',
