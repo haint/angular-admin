@@ -1,4 +1,4 @@
-define(['module/widgets/module', 'lodash'], function(module, _) {
+define(['modules/widgets/module', 'lodash'], function(module, _) {
   'use strict';
 
   module.registerDirective('widgetGrid', ['$rootScope', '$compile', '$q', '$state', '$timeout',
@@ -100,7 +100,7 @@ define(['module/widgets/module', 'lodash'], function(module, _) {
           if (_.intersection(widgetIds, dispatchedWidgetIds).length == widgetIds.length) {
             dispatchedWidgetIds = _.union(widgetIds, dispatchedWidgetIds);
             element.data('jarvisWidget') && element.data('jarvisWidget').destroy();
-            element.jarvisWidget(jarvisWidgetDefaults);
+            element.jarvisWidgets(jarvisWidgetDefaults);
             initDropdowns(widgetIds);
           }
         } else {
@@ -128,7 +128,7 @@ define(['module/widgets/module', 'lodash'], function(module, _) {
 
           $viewContentLoadedOff = $rootScope.$on('$viewContentLoaded', function(event, data) {
             $timeout(function() {
-              setupWidgets(element, widgets);
+              setupWidgets(element, widgetIds);
             }, 100);
           });
 

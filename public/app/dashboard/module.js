@@ -14,7 +14,16 @@ define([
         url: '/dashboard',
         views: {
           "content@app": {
-            templateUrl: 'app/dashboard/dashboard.html'
+            controller: 'DashboardCtrl',
+            templateUrl: 'app/dashboard/dashboard.html',
+            resolve: {
+              deps: $couchPotatoProvider.resolveDependencies([
+                'dashboard/dashboard-controller',
+                'modules/graphs/directives/inline/sparkline-container',
+                'modules/graphs/directives/inline/easy-pie-chart-container',
+                'modules/graphs/directives/flot/flot-basic'
+              ])
+            }
           }
         },
         data: {

@@ -1,10 +1,10 @@
-define(['angular', 
+define(['angular',
   'angular-couch-potato',
   'angular-ui-router'], function(ng, couchPotato) {
 
-    'use strcit';
+    'use strict';
 
-    var module = ng.module('app.widgets', ['ui.router']);
+    var module = ng.module('app.calendar', ['ngResource', 'ui.router']);
 
     couchPotato.configureApp(module);
 
@@ -13,4 +13,4 @@ define(['angular',
     });
 
     return module;
-})
+});

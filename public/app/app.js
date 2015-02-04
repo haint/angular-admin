@@ -29,7 +29,9 @@ define([
     'app.layout',
     'app.dashboard',
     'app.auth',
-    'app.graphs'
+    'app.graphs',
+    'app.widgets',
+    'app.calendar'
   ]);
 
   couchPotato.configureApp(app);

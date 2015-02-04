@@ -16,10 +16,11 @@ define([
   'layout/directives/smart-layout',
   'layout/directives/state-breadcrumbs',
   'layout/directives/big-breadcrumbs',
-
+  'layout/directives/href-void',
   'layout/directives/demo/demo-states',
 
   'layout/service/smart-css',
+  
   'modules/widgets/directives/widget-grid',
   'modules/widgets/directives/jarvis-widget',
 
@@ -42,6 +43,10 @@ define([
   'components/activities/activities-controller',
   'components/activities/activities-service',
   'components/activities/activities-dropdown-toggle-directive',
+
+  //calendar
+  'components/calendar/module',
+  'components/calendar/models/calendar-event',
 
   'components/shortcut/toggle-shortcut',
 
