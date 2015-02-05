@@ -6,13 +6,13 @@
     <h2>Live Feeds</h2>
 
     <ul class="nav nav-tabs pull-right in" id="myTab">
-      <li class="active">
+      <li>
         <a data-toggle="tab" href="#s1"><i class="fa fa-clock-o"></i> <span class="hidden-mobile hidden-tablet">Live Stats</span></a>
       </li>
       <li>
         <a data-toggle="tab" href="#s2"><i class="fa fa-facebook"></i> <span class="hidden-mobile hidden-tablet">Social Network</span></a>
       </li>
-      <li>
+      <li class="active">
         <a data-toggle="tab" href="#s3"><i class="fa fa-dollar"></i> <span class="hidden-mobile hidden-tablet">Revenue</span></a>
       </li>
     </ul>
@@ -24,7 +24,7 @@
       <!-- content -->
       <div id="myTabContent" class="tab-content">
         <!-- tab s1 -->
-        <div class="tab-pane fade active in padding-10 no-padding-bottom" id="s1">
+        <div class="tab-pane fade padding-10 no-padding-bottom" id="s1">
           
           <div class="row no-space">
             <!-- live chart -->
@@ -198,9 +198,89 @@
           </div>
 
         </div>
+        <!-- end s1 -->
+
+        <!-- s2 -->
+        <div class="tab-pane fade" id="s2">
+          <div class="widget-body-toolbar bg-color-white">
+            <form class="form-inline" role="form">
+              
+              <div class="form-group">
+                <input type="email" class="form-control input-sm" placeholder="Show From">
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control input-sm" placeholder="To">
+              </div>
+
+              <div class="btn-group hidden-phone pull-right">
+                <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown">
+                  <i class="fa fa-cog"></i> More <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu pull-right">
+                  <li>
+                    <a href-void><i class="fa fa-file-text-alt"></i> Export to PDF</a>
+                  </li>
+                  <li>
+                    <a href-void><i class="fa fa-question-sign"></i> Help</a>
+                  </li>
+                </ul>
+              </div>
+
+            </form>
+          </div>
+
+          <div class="padding-10">
+            <div id="statsChart" class="chart-large has-legend-unique" flot-basic flot-data="statsData"
+              flot-options="statsDisplayOptions"></div>
+          </div>
+        </div>
+        <!-- end s2 -->
+
+        <!-- s3 -->
+        <div class="tab-pane fade active in" id="s3">
+          <div class="widget-body-toolbar bg-color-white smart-form" id="rev-toggles">
+            
+            <div class="inline-group">
+              <label for="gra-0" class="checkbox">
+                <input type="checkbox" id="gra-0" ng-model="targetsShow">
+                <i></i> Target
+              </label>
+              <label for="gra-1" class="checkbox">
+                <input type="checkbox" id="gra-1" ng-model="actualsShow">
+                <i></i> Actual
+              </label>
+              <label for="gra-2" class="checkbox">
+                <input type="checkbox" id="gra-2" ng-model="signupsShow">
+                <i></i> Signups
+              </label>
+            </div>
+
+            <div class="btn-group hidden-phone pull-right">
+              <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown">
+                <i class="fa fa-cog"></i> More <span class="caret"> </span>
+              </a>
+              <ul class="dropdown-menu pull-right">
+                <li>
+                  <a href-void><i class="fa fa-file-text-alt"></i> Export to PDF</a>
+                </li>
+                <li>
+                  <a href-void><i class="fa fa-question-sign"></i> Help</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="padding-10">
+              <div id="flotContainer" class="chart-large has-legend-unique" flot-basic flot-data="revenueData" flot-options="revenueDisplayOptions">
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- end s3 -->
 
       </div>
     </div>
   </div>
+  <!-- end widget div -->
 
 </div>
