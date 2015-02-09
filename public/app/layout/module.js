@@ -20,7 +20,8 @@ define([
             resolve: {
               deps: $couchPotatoProvider.resolveDependencies([
                 'auth/directives/login-info',
-                'modules/graphs/directives/inline/sparkline-container'
+                'modules/graphs/directives/inline/sparkline-container',
+                'components/chat/api/chat-api'
               ])
             }
           }

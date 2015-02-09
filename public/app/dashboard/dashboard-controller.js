@@ -275,6 +275,13 @@ define(['dashboard/module', 'lodash'], function(module, _) {
       })
 
       $scope.revenueData = [targets];
+
+      $scope.events = [];
+
+      CalendarEvent.query().$promise.then(function(events) {
+        $scope.events = events;
+      });
+
   }]);
 
 });

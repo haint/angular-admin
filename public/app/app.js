@@ -31,7 +31,8 @@ define([
     'app.auth',
     'app.graphs',
     'app.widgets',
-    'app.calendar'
+    'app.calendar',
+    'app.chat'
   ]);
 
   couchPotato.configureApp(app);

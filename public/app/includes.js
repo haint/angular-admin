@@ -47,8 +47,12 @@ define([
   //calendar
   'components/calendar/module',
   'components/calendar/models/calendar-event',
+  'components/calendar/directives/full-calendar',
 
   'components/shortcut/toggle-shortcut',
+
+  //chat
+  'components/chat/module',
 
   //language
   'components/language/Language',
