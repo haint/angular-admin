@@ -282,6 +282,18 @@ define(['dashboard/module', 'lodash'], function(module, _) {
         $scope.events = events;
       });
 
+      // bird eye widget data
+      $scope.countriesVisitsData = {
+        "US": 4977,
+        "AU": 4873,
+        "IN": 3671,
+        "BR": 2476,
+        "TR": 1476,
+        "CN": 146,
+        "CA": 134,
+        "BD": 100,
+        "VN": 4689
+      };
   }]);
 
 });

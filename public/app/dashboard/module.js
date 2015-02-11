@@ -21,9 +21,10 @@ define([
                 'dashboard/dashboard-controller',
                 'modules/graphs/directives/inline/sparkline-container',
                 'modules/graphs/directives/inline/easy-pie-chart-container',
+                'modules/graphs/directives/vectormap/vector-map',
                 'modules/graphs/directives/flot/flot-basic',
                 'components/chat/directives/chat-widget',
-                'components/chat/directives/chat-users'
+                'components/chat/directives/chat-users',
               ])
             }
           }

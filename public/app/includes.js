@@ -61,7 +61,12 @@ define([
 
   //projects
   'components/projects/Projects',
-  'components/projects/recent-projects'
+  'components/projects/recent-projects',
+
+  //todo
+  'components/todo/todo-container',
+  'components/todo/models/todo',
+  'components/todo/directives/todo-list'
 
 ], function() {
   'use strict';
