@@ -10,7 +10,8 @@ define(['modules/widgets/module'], function(module) {
 
         element.find('.widget-body').prepend('<div class="jarviswidget-editbox"><input class="form-control" type="text"></div>');
         element.addClass('jarviswidget jarviswidget-sortable');
-        $rootScope.$emit('jarviswidgetAdded', element);
+
+        $rootScope.$emit('jarvisWidgetAdded', element);
       }
     }
   }]);

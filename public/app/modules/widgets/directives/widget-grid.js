@@ -8,9 +8,9 @@ define(['modules/widgets/module', 'lodash'], function(module, _) {
         widgets: '.jarviswidget',
         localStorage: true,
         deleteSettingsKey: '#deletesettingskey-options',
-        settingsKeyLabel: 'Reset setting?',
-        deletePositionKey: '#deletepostionkey-options',
-        positionKeyLabel: 'Reset postion?',
+        settingsKeyLabel: 'Reset settings?',
+        deletePositionKey: '#deletepositionkey-options',
+        positionKeyLabel: 'Reset position?',
         sortalbe: true,
         buttonsHidden: false,
         
@@ -75,10 +75,6 @@ define(['modules/widgets/module', 'lodash'], function(module, _) {
         ajaxnav: true
       }
 
-      var dispatchedWidgetIds = [];
-      var setupWaiting = false;
-
-      var debug = 1;
 
       var initDropdowns = function(widgetIds) {
         angular.forEach(widgetIds, function(wid){
@@ -95,9 +91,13 @@ define(['modules/widgets/module', 'lodash'], function(module, _) {
         });
       }
 
+      var dispatchedWidgetIds = [];
+      var setupWaiting = false;
+      var debug = 1;
+
       var setupWidgets = function(element, widgetIds) {
         if (!setupWaiting) {
-          if (_.intersection(widgetIds, dispatchedWidgetIds).length == widgetIds.length) {
+          if (_.intersection(widgetIds, dispatchedWidgetIds).length != widgetIds.length) {
             dispatchedWidgetIds = _.union(widgetIds, dispatchedWidgetIds);
             element.data('jarvisWidget') && element.data('jarvisWidget').destroy();
             element.jarvisWidgets(jarvisWidgetDefaults);
@@ -133,6 +133,7 @@ define(['modules/widgets/module', 'lodash'], function(module, _) {
           });
 
           jarvisWidgetAddedOff = $rootScope.$on('jarvisWidgetAdded', function(event, widget) {
+
             if (widgetIds.indexOf(widget.attr('id')) == -1) {
               widgetIds.push(widget.attr('id'));
               $timeout(function() {

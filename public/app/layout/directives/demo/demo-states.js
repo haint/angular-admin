@@ -20,12 +20,12 @@ define(['layout/module', 'lodash', 'notification'], function(module, _) {
 
         var $body = $('body');
 
-        $scope.fixedHeader = localStorage.getItem('sm-fixed-header') == true;
-        $scope.fixedNavigation = localStorage.getItem('sm-fixed-navigation') == true;
-        $scope.fixedRibbon = localStorage.getItem('sm-fixed-ribbon') == true;
-        $scope.fixedPageFooter = localStorage.getItem('sm-fixed-page-footer') == true;
-        $scope.insideContainer = localStorage.getItem('sm-inside-container') == true;
-        $scope.menuOnTop = localStorage.getItem('sm-menu-on-top') == true;
+        $scope.fixedHeader = localStorage.getItem('sm-fixed-header') == 'true';
+        $scope.fixedNavigation = localStorage.getItem('sm-fixed-navigation') == 'true';
+        $scope.fixedRibbon = localStorage.getItem('sm-fixed-ribbon') == 'true';
+        $scope.fixedPageFooter = localStorage.getItem('sm-fixed-page-footer') == 'true';
+        $scope.insideContainer = localStorage.getItem('sm-inside-container') == 'true';
+        $scope.menuOnTop = localStorage.getItem('sm-menu-on-top') == 'true';
 
         $scope.skins = appConfig.skins;
         $scope.smartSkin = localStorage.getItem('sm-skin') || appConfig.smartSkin;
@@ -56,6 +56,7 @@ define(['layout/module', 'lodash', 'notification'], function(module, _) {
         }
 
         $scope.$watch('fixedHeader', function(fixedHeader) {
+
           localStorage.setItem('sm-fixed-header', fixedHeader);
           $body.toggleClass('fixed-header', fixedHeader);
           if (fixedHeader == false) {

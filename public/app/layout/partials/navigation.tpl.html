@@ -13,9 +13,10 @@
           <span class="menu-item-parent">{{getWord('Dashboard')}}</span>
         </a>
       </li>
-      <li>
-        <a title="Inbox"><i class="fa fa-lg fa-fw fa-inbox"></i>
+      <li data-ui-sref-active="active">
+        <a data-ui-sref="app.inbox.folder" title="Inbox"><i class="fa fa-lg fa-fw fa-inbox"></i>
           <span class="menu-item-parent">{{getWord('Inbox')}}</span>
+          <span class="badge inbox-badge pull-right" unread-messages-count></span>
         </a>
       </li>     
       <li data-menu-collapse>
