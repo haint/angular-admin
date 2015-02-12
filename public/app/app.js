@@ -32,7 +32,8 @@ define([
     'app.graphs',
     'app.widgets',
     'app.calendar',
-    'app.chat'
+    'app.chat',
+    'app.inbox'
   ]);
 
   couchPotato.configureApp(app);

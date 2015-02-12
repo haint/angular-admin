@@ -42,7 +42,7 @@ define(['layout/module', 'lodash'], function(module, _) {
         var destroyForStart = $rootScope.$on('$stateChangeStart', 
           function(event, toState, toParams, fromState, fromParam) {
             var isAnimRequired = _.any(viewsToMatch, function(view) {
-              return _.has(toState.views, view) || _.has(formState.views, view);
+              return _.has(toState.views, view) || _.has(fromState.views, view);
             });
 
             if (isAnimRequired) {

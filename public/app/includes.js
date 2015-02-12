@@ -66,7 +66,12 @@ define([
   //todo
   'components/todo/todo-container',
   'components/todo/models/todo',
-  'components/todo/directives/todo-list'
+  'components/todo/directives/todo-list',
+
+  //inbox
+  'components/inbox/module',
+  'components/inbox/models/inbox-config',
+  'components/inbox/models/inbox-message'
 
 ], function() {
   'use strict';
