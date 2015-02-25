@@ -47,7 +47,17 @@ define([
           inbox: {
             templateUrl: 'app/components/inbox/views/inbox-folder.tpl.html',
             controller: function($scope, messages, $stateParams) {
-
+              $scope.$parent.selectedFolder = _.find($scope.$parent.config.folders, {key: $stateParams.folder});
+              $scope.messages = messages;
+              $scope.$on('$inboxDeleteMessages', function(event) {
+                angular.forEach($scope.messages, function(message, idx){
+                  if (message.selected) {
+                    message.$delete(function() {
+                      $scope.messages.splice(idx, 1);
+                    })
+                  }
+                });
+              });
             },
             resolve: {
               messages: function(InboxMessage, $stateParams) {

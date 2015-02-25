@@ -5,7 +5,7 @@ define(['layout/module', 'lodash'], function(module, _) {
     return {
       restrict: 'A',
       compile: function (element, attributes) {
-        element.removeAttr('smart-router-animation-wrap data-smart-route-animation-wrap wrap-for data-wrap-for');
+        element.removeAttr('smart-router-animation-wrap data-smart-router-animation-wrap wrap-for data-wrap-for');
         element.addClass('router-animation-container');
 
         var animateElementSelector = attributes.wrapFor;
@@ -55,8 +55,8 @@ define(['layout/module', 'lodash'], function(module, _) {
         });
 
         element.on('$destroy', function() {
-          contentViewAnimStart();
-          contentViewAnimEnd();
+          destroyForStart();
+          destroyForEnd();
         });
       }
     }

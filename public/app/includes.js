@@ -14,6 +14,7 @@ define([
   'layout/directives/smart-device-detect',
   'layout/directives/smart-fast-click',
   'layout/directives/smart-layout',
+  'layout/directives/smart-fit-app-view',
   'layout/directives/state-breadcrumbs',
   'layout/directives/big-breadcrumbs',
   'layout/directives/href-void',

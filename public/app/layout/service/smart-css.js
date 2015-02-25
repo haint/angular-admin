@@ -7,7 +7,7 @@ define(['layout/module', 'lodash'], function(module, _) {
       var style = document.createElement('style');
 
       //WebKit hack
-      style.appendChild(document.createTextNode(''));
+      style.appendChild(document.createTextNode(""));
 
       //Add style element to the page
       document.head.appendChild(style);
@@ -20,9 +20,9 @@ define(['layout/module', 'lodash'], function(module, _) {
     var SmartCss = {
       writeRule: function(selector) {
         SmartCss.deleteRuleFor(selector);
-        if (_.has(_styles[selector])) {
-          var css = selector + '{' + _.map(_styles[selector], function(k, v) {
-            return k + ':' + value;
+        if (_.has(_styles, selector)) {
+          var css = selector + '{ ' + _.map(_styles[selector], function(value, key) {
+            return key + ':' + value + ';'
           }).join(' ') + '}';
 
           sheet.insertRule(css);
