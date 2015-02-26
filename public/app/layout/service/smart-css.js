@@ -25,7 +25,15 @@ define(['layout/module', 'lodash'], function(module, _) {
             return key + ':' + value + ';'
           }).join(' ') + '}';
 
-          sheet.insertRule(css);
+          //workaround for firefox
+          var isFirefox = typeof InstallTrigger !== 'undefined';
+
+          if (isFirefox) {
+            console.log(sheet.cssRules.length);
+            sheet.insertRule(css, sheet.cssRules.length);
+          } else {
+            sheet.insertRule(css);
+          }
         }
       },
       add: function(selector, property, value, delay) {

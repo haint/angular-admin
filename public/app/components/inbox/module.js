@@ -66,6 +66,22 @@ define([
             }
           }
         }
+      })
+      .state('app.inbox.folder.detail', {
+        url: '/detail/:message',
+        views: {
+          'inbox@app.inbox': {
+            templateUrl: 'app/components/inbox/views/inbox-detail.tpl.html',
+            controller: function($scope, message) {
+              $scope.message = message;
+            },
+            resolve: {
+              message: function(InboxMessage, $stateParams) {
+                return InboxMessage.get({id: $stateParams.message})
+              }
+            }
+          }
+        }
       });
   }]);
 

@@ -6,8 +6,6 @@ define(['layout/module', 'lodash'], function(module, _) {
       restrict: 'A',
       compile: function(element, attributes) {
 
-        console.log(attributes);
-
         element.removeAttr('smart-fit-app-view data-smart-fit-app-view leading-y data-leading-y');
 
         var leadingY = attributes.leadingY ? parseInt(attributes.leadingY) : 0;
