@@ -29,7 +29,6 @@ define(['layout/module', 'lodash'], function(module, _) {
           var isFirefox = typeof InstallTrigger !== 'undefined';
 
           if (isFirefox) {
-            console.log(sheet.cssRules.length);
             sheet.insertRule(css, sheet.cssRules.length);
           } else {
             sheet.insertRule(css);

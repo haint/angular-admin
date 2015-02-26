@@ -12,6 +12,32 @@ define([
 
   couchPotato.configureApp(module);
 
+  module.filter('filesize', function() {
+    var units = [
+      'bytes',
+      'KB',
+      'MB',
+      'GB',
+      'TB',
+      'PB'
+    ];
+
+    return function(bytes, precision) {
+      if (isNaN(parseFloat(bytes)) || !isFinite(bytes)) {
+        return '?';
+      }
+
+      var unit = 0;
+
+      while (bytes >= 1024) {
+        bytes /= 1024;
+        unit ++;
+      }
+
+      return bytes.toFixed(precision) + ' ' + units[unit];
+      }
+  });
+
   module.config(['$stateProvider', '$couchPotatoProvider',function($stateProvider, $couchPotatoProvider) {
     
     $stateProvider
@@ -78,6 +104,34 @@ define([
             resolve: {
               message: function(InboxMessage, $stateParams) {
                 return InboxMessage.get({id: $stateParams.message})
+              }
+            }
+          }
+        }
+      })
+      .state('app.inbox.folder.reply', {
+        url: '/reply/:message',
+        views: {
+          'inbox@app.inbox': {
+            templateUrl: 'app/components/inbox/views/inbox-reply.tpl.html',
+            controller: function($scope, $timeout, $state, replyTo) {
+              $scope.replyTo = replyTo;
+              $scope.sending = false;
+              $scope.send = function() {
+                $scope.sending = true;
+                $timeout(function() {
+                  $state.go('app.inbox.folder');
+                }, 1000);
+              }
+            },
+            controllerAs: 'replyCtrl',
+            resolve: {
+              deps: $couchPotatoProvider.resolveDependencies([
+                'modules/forms/directives/input/smart-select2',
+                'modules/forms/directives/editors/smart-summernote-editor'
+              ]),
+              replyTo: function (InboxMessage, $stateParams) {
+                return InboxMessage.get({id: $stateParams.message});
               }
             }
           }

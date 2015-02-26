@@ -34,6 +34,9 @@ define([
   //widgets
   'modules/widgets/module',
 
+  //forms
+  'modules/forms/module',
+
   //account
   'auth/module',
   'auth/models/User',
