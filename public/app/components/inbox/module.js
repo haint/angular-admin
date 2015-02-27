@@ -138,7 +138,28 @@ define([
         }
       })
       .state('app.inbox.folder.compose', {
-        url: '/compose'
+        url: '/compose',
+        views: {
+          'inbox@app.inbox': {
+            templateUrl: 'app/components/inbox/views/inbox-compose.tpl.html',
+            controller: function($scope, $timeout, $state) {
+              $scope.sending = false;
+              $scope.send = function() {
+                $scope.sending = true;
+                $timeout(function() {
+                  $state.go('app.inbox.folder');
+                }, 1000);
+              }
+            },
+            controllerAs: 'composeCtrl',
+            resolve: {
+              deps: $couchPotatoProvider.resolveDependencies([
+                'modules/forms/directives/input/smart-select2',
+                'modules/forms/directives/editors/smart-summernote-editor'
+              ])
+            }
+          }
+        }
       });
   }]);
 
