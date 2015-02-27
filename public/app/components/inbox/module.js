@@ -136,6 +136,9 @@ define([
             }
           }
         }
+      })
+      .state('app.inbox.folder.compose', {
+        url: '/compose'
       });
   }]);
 
